@@ -6,13 +6,17 @@ body{
 
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
+	.carousel{
+		width: 90%;
+		margin: 0 auto;
+	}
 	padding: 30px 0px 20px 0px;
 	width: 100%;
 	.parrafo{
 		background-color:transparent;
 		width: 100%;
 		position: absolute;
-		top: 221px;
+		top: 195px;
 		color: black;
 		}
 		.titulo-index{
@@ -22,6 +26,13 @@ body{
 		.parrafo-index{
 			font-size: 10px;
 		}
-}
+		#btn-yellow{
+			background-color: $amarillo-botones;
+			color: white;
+			width: 80%;
+		}
+	
+	}
+
 
 /*fin de estilos de la pantalla-1 */

@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 
 gulp.task('script', function(){
-	gulp.src(['node_modules/jquery/public/jquery.js' , 'node_modules/materialize-css/public/js/materialize.js' , 'assets/js/*.js'])
+	gulp.src(['node_modules/jquery/dist/jquery.js' , 'node_modules/materialize-css/dist/js/materialize.js' , 'assets/js/*.js'])
 	.pipe(concat('script.js'))
 	.pipe(gulp.dest('public/js/'));
 });

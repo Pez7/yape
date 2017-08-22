@@ -1,5 +1,40 @@
 body{
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }
-/*aqui crea los estilos*/
+
+#phone {
+  background: url('../img/icon/teelefono.png');
+  background-repeat: no-repeat;
+  background-size: 70px 30px;
+  background-position: left;
+  text-align: center;
+}
+
+.header_phone {
+  img {
+    width: 40%;
+    margin-top: 20%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+
+  &__subtitle {
+    color: #DFDFDF;
+  }
+
+}
+
+#phone_button {
+  background: #FBD43B;
+  margin-top: 10%;
+}
+
+.input-field.col label {
+    width: 100%;
+    top: -1.2em;
+    left: initial;
+  }

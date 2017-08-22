@@ -3,3 +3,31 @@ body{
 	padding:0;
 }
 /*aqui crea los estilos*/
+#screen-4{
+		div .row{
+			div{
+				img{
+					margin-top: 40px;
+					width: 195px;
+				}
+				h4{
+					font-weight:700;
+				}
+			}
+		}
+		div.row{
+			div .input-field{
+				img{
+					width: 31px;
+					margin-top: 10px;
+				}
+			}
+		}
+		div.row{
+			div{
+				a{
+					text-transform:uppercase;
+				}
+			}
+		}
+}

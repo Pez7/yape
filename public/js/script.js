@@ -20329,6 +20329,7 @@ $(document).ready(function() {
 
 
 
+>>>>>>> master
 /*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -40584,6 +40585,9 @@ if (jQuery) {
   };
 })(jQuery);
 
+<<<<<<< HEAD
+alert("hola");
+=======
 
  $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({fullWidth: true});
@@ -40632,5 +40636,4 @@ $(document).ready(function() {
         }
     }
 });
-
 

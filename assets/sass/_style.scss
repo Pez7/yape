@@ -4,6 +4,47 @@ body{
 }
 /*aqui crea los estilos*/
 
+/*inicio pantalla 5*/
+#body-pantalla5{
+	background-color: $amarillo-botones;
+	#pantalla5{
+		color: $negro;
+		text-align: center;
+		font-weight: bold;
+		position: relative;
+		margin-top: 50%;
+		img{
+			width: 30%;
+		}
+	}
+}
+/*fin pantalla 5*/
+
+/*inicio pantalla 7*/
+#a-pantalla7{
+	background-color: #451e36;
+}
+
+#body-pantalla7{
+background-color: #38052a;
+}
+
+.b-pantalla7{
+	color: whitesmoke;
+	font-weight: bold;
+#mov{
+font-size: 20px;
+margin-top: -80px;
+height: 100%;
+}
+	text-align: center;
+	position: relative;
+	margin-top: 50%;
+	img{
+		width: 30%;
+	}
+}
+/*fin pantalla 7*/
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
 	padding: 30px 0px 20px 0px;

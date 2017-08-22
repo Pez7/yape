@@ -40585,6 +40585,10 @@ if (jQuery) {
 })(jQuery);
 
 
+ $(document).ready(function(){
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+    });
+        
 $(document).ready(function() {
 
     $('#acepto').on('click', function() {

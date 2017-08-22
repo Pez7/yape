@@ -4,6 +4,28 @@ body{
 }
 /*aqui crea los estilos*/
 
+/* inicio de los estilos de la pantalla-1 */ 
+.contenedor-index{
+	padding: 30px 0px 20px 0px;
+	width: 100%;
+	.parrafo{
+		background-color:transparent;
+		width: 100%;
+		position: absolute;
+		top: 221px;
+		color: black;
+		}
+		.titulo-index{
+			font-size: 15px;
+			font-weight: bolder;
+		}
+		.parrafo-index{
+			font-size: 10px;
+		}
+}
+
+/*fin de estilos de la pantalla-1 */
+
 
 /*pantalla 3*/
 #ingresar-codigo{

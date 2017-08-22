@@ -20296,4 +20296,18 @@ $(document).ready(function() {
             $("#phone_button").addClass('disabled');
         }
     }
+
+    $.ajax({
+        url: '/api/registerNumber',
+        type: 'POST',
+        data: {'terms': 'true', 'hone': '123456789'},
+    })
+    .done(function(res) {
+        console.log(res);
+        console.log("success");
+    })
+    .fail(function(res) {
+        console.log(res);
+        console.log("error");
+    })
 });

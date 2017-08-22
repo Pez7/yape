@@ -3,3 +3,35 @@ body{
 	padding:0;
 }
 /*aqui crea los estilos*/
+
+
+/*pantalla 3*/
+#ingresar-codigo{
+	.back{
+		padding-top: 20px;
+		a{
+			color: #000;
+		}
+	}
+	.img-mensage{
+		width: 40%;
+	}
+	.code{
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.input-field{
+		.prefix{
+			width: 22px;
+			margin-top:10px;
+		}
+	}
+	.text-grey{
+		color: $gris-soft;
+	}	
+	#num{
+		font-size: 14px;
+		color: $gris-soft;
+	}
+}
+/*fin pantalla 3*/

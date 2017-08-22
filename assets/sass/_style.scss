@@ -26,6 +26,71 @@ body{
 
 /*fin de estilos de la pantalla-1 */
 
+
+/*pantalla 3*/
+#ingresar-codigo{
+	.back{
+		padding-top: 20px;
+		a{
+			color: #000;
+		}
+	}
+	.img-mensage{
+		width: 40%;
+	}
+	.code{
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.input-field{
+		.prefix{
+			width: 22px;
+			margin-top:10px;
+		}
+	}
+	.text-grey{
+		color: $gris-soft;
+	}	
+	#num{
+		font-size: 14px;
+		color: $gris-soft;
+	}
+}
+/*fin pantalla 3*/
+
+/*aqui crea los estilos*/
+/*estilos pantalla 4*/
+#screen-4{
+		div .row{
+			div{
+				img{
+					margin-top: 40px;
+					width: 195px;
+				}
+				h4{
+					font-weight:700;
+				}
+			}
+		}
+		div.row{
+			div .input-field{
+				img{
+					width: 31px;
+					margin-top: 10px;
+				}
+			}
+		}
+		div.row{
+			div{
+				a{
+					text-transform:uppercase;
+				}
+			}
+		}
+}
+/*fin estilos pantalla 4*/
+
+
 #phone {
   background: url('../img/icon/teelefono.png');
   background-repeat: no-repeat;
@@ -61,3 +126,4 @@ body{
     top: -1.2em;
     left: initial;
   }
+

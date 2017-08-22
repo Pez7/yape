@@ -1,6 +1,6 @@
 body{
-	margin:0;
-	padding:0;
+    margin:0;
+    padding:0;
 }
 /*aqui crea los estilos*/
 
@@ -45,3 +45,126 @@ height: 100%;
 	}
 }
 /*fin pantalla 7*/
+/* inicio de los estilos de la pantalla-1 */ 
+.contenedor-index{
+	padding: 30px 0px 20px 0px;
+	width: 100%;
+	.parrafo{
+		background-color:transparent;
+		width: 100%;
+		position: absolute;
+		top: 221px;
+		color: black;
+		}
+		.titulo-index{
+			font-size: 15px;
+			font-weight: bolder;
+		}
+		.parrafo-index{
+			font-size: 10px;
+		}
+}
+
+/*fin de estilos de la pantalla-1 */
+
+
+/*pantalla 3*/
+#ingresar-codigo{
+	.back{
+		padding-top: 20px;
+		a{
+			color: #000;
+		}
+	}
+	.img-mensage{
+		width: 40%;
+	}
+	.code{
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.input-field{
+		.prefix{
+			width: 22px;
+			margin-top:10px;
+		}
+	}
+	.text-grey{
+		color: $gris-soft;
+	}	
+	#num{
+		font-size: 14px;
+		color: $gris-soft;
+	}
+}
+/*fin pantalla 3*/
+
+/*aqui crea los estilos*/
+/*estilos pantalla 4*/
+#screen-4{
+		div .row{
+			div{
+				img{
+					margin-top: 40px;
+					width: 195px;
+				}
+				h4{
+					font-weight:700;
+				}
+			}
+		}
+		div.row{
+			div .input-field{
+				img{
+					width: 31px;
+					margin-top: 10px;
+				}
+			}
+		}
+		div.row{
+			div{
+				a{
+					text-transform:uppercase;
+				}
+			}
+		}
+}
+/*fin estilos pantalla 4*/
+
+
+#phone {
+  background: url('../img/icon/teelefono.png');
+  background-repeat: no-repeat;
+  background-size: 70px 30px;
+  background-position: left;
+  text-align: center;
+}
+
+.header_phone {
+  img {
+    width: 40%;
+    margin-top: 20%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+
+  &__subtitle {
+    color: #DFDFDF;
+  }
+
+}
+
+#phone_button {
+  background: #FBD43B;
+  margin-top: 10%;
+}
+
+.input-field.col label {
+    width: 100%;
+    top: -1.2em;
+    left: initial;
+  }
+

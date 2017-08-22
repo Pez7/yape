@@ -3,3 +3,19 @@ body{
 	padding:0;
 }
 /*aqui crea los estilos*/
+
+/*inicio pantalla 5*/
+#body-pantalla5{
+	background-color: $amarillo-botones;
+	#pantalla5{
+		color: $negro;
+		text-align: center;
+		font-weight: bold;
+		position: relative;
+		margin-top: 50%;
+		img{
+			width: 30%;
+		}
+	}
+}
+/*fin pantalla 5*/

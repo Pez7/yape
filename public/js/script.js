@@ -20264,8 +20264,10 @@ $(document).ready(function(){
 		false;
 	}else if (email == vacio) {
 		false;
-	}else if (password == vacio && password > 7) {
+	}else if (password == vacio && password.length > 7) {
 		false;
+	}else{
+		true
 	}
 
 	if (nombre == true && email == true && password == true) {
@@ -20276,6 +20278,29 @@ $(document).ready(function(){
 	localStorage.getItem(nombre);
 	localStorage.getItem(email);
 	localStorage.getItem(password);
+});
+$(document).ready(function(){
+	var pin = $('#pass-card').val();
+
+	if (pin.length > 0) {
+		alert("hola peyita");
+	}
+
+	if (pin != " ") {
+		$("#registrar").removeClass('disabled');
+	}
+
+	localStorage.setItem(pin);
+});
+
+
+$(document).ready(function(){
+	var tarjeta = $('#card').val();
+	var mes = $('#month').val();
+	var anio = $('#year').val();
+
+	localStorage.getItem(tarjeta);
+
 });
 $(document).ready(function() {
 

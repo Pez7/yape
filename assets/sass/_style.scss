@@ -72,7 +72,41 @@ body{
 		}
 	}
 }
-
+#back{
+	color:$negro;
+	font-size:17px;
+	i{
+		font-weight:300;
+		font-size: 21px;
+	}
+}
+#box-card{
+	img{
+		width: 125px;
+		margin-top: 27px;
+	}
+	h5{
+		font-weight:500;
+	}
+	p{
+		span{
+			color:$gris-soft;
+		}
+	}
+}
+#card-two{
+	img{
+		width: 27px;
+		margin-top: 10px;
+	}
+}
+#input-card{
+	.s3{
+		i{
+			margin-top:28px;
+		}
+	}
+}
 /*Fin estilos pantalla 6*/
 #phone {
   background: url('../img/icon/teelefono.png');

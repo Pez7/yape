@@ -8,8 +8,10 @@ $(document).ready(function(){
 		false;
 	}else if (email == vacio) {
 		false;
-	}else if (password == vacio && password > 7) {
+	}else if (password == vacio && password.length > 7) {
 		false;
+	}else{
+		true
 	}
 
 	if (nombre == true && email == true && password == true) {

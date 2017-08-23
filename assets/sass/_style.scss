@@ -44,6 +44,34 @@ body{
 }
 /*fin estilos pantalla 4*/
 /*Inicio estilos pantalla 6*/
+#box{
+	img{
+		width: 125px;
+		margin-top: 27px;
+	}
+	h5 #head{
+		font-weight:500;
+	}
+	p{
+		font-size: 17px;
+		color:$gris-soft;
+	}
+}
+#card-img{
+	img{
+		width: 27px;
+		margin-top: 10px;
+	}
+}
+#scan{
+	p{
+		color:$turquesa;
+		margin-top:-30px;
+		img{
+			width:27px;
+		}
+	}
+}
 
 /*Fin estilos pantalla 6*/
 #phone {

@@ -15,15 +15,19 @@
 		<div id="box" class="col s12 center">
 			<img class="img-centro" src="../public/img/icon/bcp-logo.png" alt="lock">
 			<h5 id="head">Ingresa tu tarjeta de débito BCP</h5>
-			<p>Por ahora sólo aceptamos cuentas de ahorro y/o corriente en soles. .</p>
+			<p>Por ahora sólo aceptamos cuentas de ahorro y/o corriente en soles.</p>
 		</div>
 	</div>
 	<div class="row">
-				<div class="input-field col s12">
-					<img src="../public/img/icon/card.png" class="prefix" alt="">
-					<input id="card" type="text" class="validate center">
-					<p class="center"><img src="img/icon/scan.png" alt="">Escanear tajeta</p>
-				</div>
+		<div id="card-img" class="input-field col s12">
+			<img src="../public/img/icon/card.png" class="prefix" alt="">
+			<input id="card" type="text" maxlength="16" class="validate center">
+		</div>
+	</div>
+	<div class="row">
+		<div id="scan" class="col s12 center">
+			<p><img src="img/icon/scan.png" class="prefix" alt=""> Escanear tarjeta</p>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col s5">
@@ -31,11 +35,11 @@
 		</div>
 		<div class="col s7">
 			<div class="input-field col s5">
-				<input id="month" type="text" class="validate" placeholder="Mes">
+				<input id="month" type="number" min="01" max="12" class="validate" placeholder="Mes">
 			</div>
 			<p class="col s1">/</p>
 			<div class="input-field col s5">
-				<input id="year" type="text" class="validate" placeholder="Año">
+				<input id="year" type="number" min="17" max="24" class="validate" placeholder="Año">
 			</div>
 		</div>
 	</div>

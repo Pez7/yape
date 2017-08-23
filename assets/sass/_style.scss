@@ -4,32 +4,43 @@ body{
 }
 /*aqui crea los estilos*/
 /*estilos pantalla 4*/
+
 #screen-4{
-		div .row{
-			div{
+	div.row{
+		div .col{
+			div.input-field{
 				img{
-					margin-top: 40px;
-					width: 195px;
-				}
-				h4{
-					font-weight:700;
-				}
-			}
-		}
-		div.row{
-			div .input-field{
-				img{
-					width: 31px;
+					width: 27px;
 					margin-top: 10px;
 				}
 			}
-		}
-		div.row{
-			div{
-				a{
-					text-transform:uppercase;
-				}
+			p{
+				font-weight:400;
+				font-size:18px;
+				color:$gris-soft;
 			}
 		}
+	}
 }
+#first-box{
+	.img-centro{
+		width: 125px;
+		margin-top: 27px;
+	}
+	#cinco{
+		font-weight:500;
+	}
+	p{
+		font-size: 17px;
+		color:$gris-soft;
+	}
+}
+#crear{
+	text-transform:uppercase;
+	border-radius: 5%;
+}
+.correct{
+	background-color:$amarillo-botones;
+}
+
 /*fin estilos pantalla 4*/

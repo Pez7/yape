@@ -43,20 +43,6 @@ $(document).ready(function() {
         }
     }
 
-    $.ajax({
-        url: '/api/registerNumber',
-        type: 'POST',
-        data: {'terms': 'true', 'hone': '123456789'},
-    })
-    .done(function(res) {
-        console.log(res);
-        console.log("success");
-    })
-    .fail(function(res) {
-        console.log(res);
-        console.log("error");
-    })
-
     $('#phone_button').on('click', function() {
         $.ajax({
         url: '/api/registerNumber',
@@ -65,10 +51,15 @@ $(document).ready(function() {
         })
         .done(function(response) {
             console.log("[SUCCESS]");
-            alert(response.message + " - CODIGO : " + response.data.code);
+            $("#modal_code h4").text(response.message);
+            $("#modal_code .code").text(response.data.code);
+            //alert(response.message + " - CODIGO : " + response.data.code);
         })
         .fail(function(response) {
             console.log("[ERROR]");
         })
     });
+
+    // MODAL
+    $('.modal').modal();
 });

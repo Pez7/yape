@@ -17,7 +17,6 @@ $(document).ready(function(){
 		$('#crear').addClass('correct');
 	}
 
-
 	localStorage.getItem(nombre);
 	localStorage.getItem(email);
 	localStorage.getItem(password);

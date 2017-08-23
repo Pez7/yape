@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         if(phoneIsValid()) {
             showPhoneOkMessage();
-        } else  {
+        } else {
             showPhoneErrorMessage();
         }
 
@@ -43,6 +43,20 @@ $(document).ready(function() {
         }
     }
 
+    $.ajax({
+        url: '/api/registerNumber',
+        type: 'POST',
+        data: {'terms': 'true', 'hone': '123456789'},
+    })
+    .done(function(res) {
+        console.log(res);
+        console.log("success");
+    })
+    .fail(function(res) {
+        console.log(res);
+        console.log("error");
+    })
+
     $('#phone_button').on('click', function() {
         $.ajax({
         url: '/api/registerNumber',
@@ -57,5 +71,4 @@ $(document).ready(function() {
             console.log("[ERROR]");
         })
     });
-
 });

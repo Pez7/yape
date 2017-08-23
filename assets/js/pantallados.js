@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         if(phoneIsValid()) {
             showPhoneOkMessage();
-        } else  {
+        } else {
             showPhoneErrorMessage();
         }
 
@@ -43,7 +43,6 @@ $(document).ready(function() {
         }
     }
 
-<<<<<<< HEAD
     $.ajax({
         url: '/api/registerNumber',
         type: 'POST',
@@ -57,7 +56,7 @@ $(document).ready(function() {
         console.log(res);
         console.log("error");
     })
-=======
+
     $('#phone_button').on('click', function() {
         $.ajax({
         url: '/api/registerNumber',
@@ -72,6 +71,4 @@ $(document).ready(function() {
             console.log("[ERROR]");
         })
     });
-
->>>>>>> origin
 });

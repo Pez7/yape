@@ -8,20 +8,27 @@ $(document).ready(function() {
 	}
 });
 
-var contador = function(){
-	var n = 0; //inicializador
-	var l = document.getElementById("num"); //donde muestra el dato 
-	window.setInterval(function(){ 
-	  	l.innerHTML = n;
-	  	n++;
-
-	  	if(n==22){ //condición de veces que avence el número
-	  		n=0;
-	  	}
-	},1000);
-}
-
 var datos = function(){
 	var info = $('#info-ingresada').val();
+	
+	$.ajax({
+		url: '/api/resendCode',
+		type: 'POST',
+		data: {
+			'terms':true,
+			'code': info
+		},
+	})
+	.done(function(res) {
+		console.log("success");
+		console.log(res.data.code);
+
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 	
 }

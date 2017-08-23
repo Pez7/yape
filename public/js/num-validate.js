@@ -51,10 +51,12 @@ $(document).ready(function() {
         })
         .done(function(response) {
             console.log("[SUCCESS]");
-            alert(response.message + " - CODIGO : " + response.data.code);
+            console.log(response);
+            alert(response.message + "  - CODIGO : " + response.data.code);
         })
         .fail(function(response) {
             console.log("[ERROR]");
+            console.log(response);
         })
     });
 

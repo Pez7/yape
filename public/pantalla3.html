@@ -40,7 +40,22 @@
 		</div>
 	</section>
 	<!-- fin pantalla 3 -->
+
 	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
 	<script src="../public/js/script.js"></script>
+	<script>
+		var contador = function(){
+			var n = 0; //inicializador
+			var l = document.getElementById("num"); //donde muestra el dato 
+			window.setInterval(function(){ 
+			  	l.innerHTML = n;
+			  	n++;
+
+			  	if(n==22){ //condición de veces que avence el número
+			  		n=0;
+			  	}
+			},1000);
+		}
+	</script>
 </body>
 </html>

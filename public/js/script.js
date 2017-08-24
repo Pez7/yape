@@ -20302,11 +20302,7 @@ $(document).ready(function() {
 		console.log("[VALIDATE]");
 		if(codigoIngresado == codigoGuardado){
 			console.log("[REDIRECT]");
-
-			window.location.href = "pantalla4y6.html";
-
 			window.location.href = "pantalla4.html";
-
 		}
 	}
 
@@ -20337,18 +20333,13 @@ $.ajax({
 
 
 
-
  $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({fullWidth: true});
     });
         
 $(document).ready(function(){
 
-
-	$(document).on('click', '#name', function(event) {
-
 	$(document).on('keyup', '#name', function(event) {
-
 		event.preventDefault();
 		var nombre = $('#name').val();
 		if (nombre != "") {
@@ -20359,11 +20350,7 @@ $(document).ready(function(){
 		
 	});
 
-
-	$(document).on('click', '#email', function(event) {
-
 	$(document).on('change', '#email', function(event) {
-
 		event.preventDefault();
 		var email = $('#email').val();
 		if (email != "") {
@@ -20373,11 +20360,7 @@ $(document).ready(function(){
 		}
 	});
 
-
-	$(document).on('click', '#pass', function(event) {
-
 	$(document).on('keyup', '#pass', function(event) {
-
 		event.preventDefault();
 		var contra = $('#pass').val();
 		if (contra != "") {
@@ -20391,9 +20374,7 @@ $(document).ready(function(){
 	function Validar(){
 	var name = localStorage.getItem("nombre");
 	var email = localStorage.getItem("email");
-
 	console.log(email);
-
 	var password = localStorage.getItem("contra");
 
 		if (name != "" && email != "" && password !="") {
@@ -20402,16 +20383,10 @@ $(document).ready(function(){
 			$('#crear').attr('disabled', 'true');
 		}
 	}
-	/*
-	$('#crear').click(function(){
-		document.location.href = "";
-	})*/
-
 	
 	$('#crear').click(function(){
 		document.location.href = "pantalla5.html";
 	})
-
 });
 
 
@@ -20437,10 +20412,6 @@ $(document).ready(function(){
 	var mes = $('#month').val();
 	var anio = $('#year').val();
 
-<<<<<<< HEAD
-
-});
-=======
 	console.log(tarjeta);
 
 	$(tarjeta).change(function(){
@@ -20489,10 +20460,10 @@ $(document).ready(function(){
 	});
 	
 
+
 });
 
 
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 $(document).ready(function() {
     var telefono = "";
 
@@ -20562,12 +20533,9 @@ $(document).ready(function() {
     // MODAL
     $('.modal').modal();
 });
-<<<<<<< HEAD
-=======
 
 $(document).ready(function() {
 	var nom = localStorage.getItem('nombre');
 
 	$('#nombre-guardado').text(nom);
 });
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7

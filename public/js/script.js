@@ -20263,7 +20263,6 @@ $(document).ready(function() {
 	contador();
 
 	$(".input-field").on("keyup", ".info-ingresada", function(event) {
-		console.log(event);
 		codigoIngresado = $(this).val();
         validarCodigo();
     });
@@ -20301,9 +20300,8 @@ $(document).ready(function() {
 
 	function validarCodigo(){
 		console.log("[VALIDATE]");
-		console.log("[REDIRECT]" + codigoIngresado + "---" + codigoGuardado);
 		if(codigoIngresado == codigoGuardado){
-			console.log("[REDIRECT]" + codigoIngresado + "---" + codigoGuardado);
+			console.log("[REDIRECT]");
 			window.location.href = "pantalla4y6.html";
 		}
 	}

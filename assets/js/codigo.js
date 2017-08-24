@@ -1,16 +1,26 @@
 $(document).ready(function() {
-	var numeroGuardado = $('#numero-guardado').text(localStorage.getItem('telefono'));
+	var numeroGuardado = localStorage.getItem('phone');
 	var codigoGuardado = localStorage.getItem('code');
+	var codigoIngresado = "";
 
-	function contador (){
-		var n = 0; //inicializador
-		var l = document.getElementById("num"); //donde muestra el dato 
-		window.setInterval(function(){ 
-		  	l.innerHTML = n;
-		  	n++;
+	$('#numero-guardado').text(numeroGuardado);
 
-		  	if(n==22){ //limite del número
-		  		n=0;
+	contador();
+
+	$(".input-field").on("keyup", ".info-ingresada", function(event) {
+		codigoIngresado = $(this).val();
+        validarCodigo();
+    });
+
+	function contador() {
+		var contador = 0; //inicializador
+
+		window.setInterval(function(){
+		  	$("#num").text(contador);
+		  	contador++;
+
+		  	if(contador == 22){ //limite del número
+		  		contador = 0;
 		  		$.ajax({
 					url: '/api/resendCode',
 					type: 'POST',
@@ -18,31 +28,31 @@ $(document).ready(function() {
 						'phone': numeroGuardado
 					},
 				})
-				.done(function(res) {
-					console.log("success");
-					console.log(res);
-					$('.nuevo-codigo').append('<p>'+ res.data.code +'</p>');
+				.done(function(response) {
+					var newCode = response.data;
+					console.log("[SUCCESS]");
+					$("#modal_code h4").text(response.message);
+		            $("#modal_code .code").text(newCode);
+		            localStorage.setItem('code', newCode);
+		            $('.modal').modal("open");
 				})
 				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
+					console.log("[ERROR]");
 				});
 		  	}
-		},1000);
+		}, 1000);
 	}
 
-	function datos(){
-		var info = $('#info-ingresada').val();
-
-		info.change(function(){
-			if(info == codigoGuardado){
-				window.location.href = "pantalla4.html";
-			}
-		});
+	function validarCodigo(){
+		console.log("[VALIDATE]");
+		if(codigoIngresado == codigoGuardado){
+			console.log("[REDIRECT]");
+			window.location.href = "pantalla4y6.html";
+		}
 	}
 
+    // MODAL
+    $('.modal').modal();
 });
 
 

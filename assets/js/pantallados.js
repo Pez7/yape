@@ -3,7 +3,6 @@ $(document).ready(function() {
 
     $(".numero").on("keyup", "input[name=phone]", function(event) {
         telefono = $("input[name=phone]").val();
-        localStorage.setItem('telefono', telefono);
 
         if(phoneIsValid()) {
             showPhoneOkMessage();
@@ -51,12 +50,12 @@ $(document).ready(function() {
         data: {'terms': true, 'phone': telefono},
         })
         .done(function(response) {
+            var codigoGenerado = response.data.code;
+
             console.log("[SUCCESS]");
             $("#modal_code h4").text(response.message);
-
-            var codigoGenerado = response.data.code
             $("#modal_code .code").text(codigoGenerado);
-            localStorage.setItem('code',codigoGenerado);
+            localStorage.setItem('code', codigoGenerado);
             localStorage.setItem('phone', telefono);
             //alert(response.message + " - CODIGO : " + response.data.code);
         })

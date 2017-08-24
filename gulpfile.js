@@ -10,15 +10,17 @@ gulp.task('script', function(){
 	.pipe(gulp.dest('public/js/'));
 });
 
-gulp.task('script-libraries', function(){
+gulp.task('script-code', function(){
     gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/materialize-css/dist/js/materialize.js'])
     .pipe(concat('libraries.js'))
     .pipe(gulp.dest('public/js/'));
-});
 
-gulp.task('script-num-validate', function(){
     gulp.src(['assets/js/pantallados.js'])
     .pipe(concat('num-validate.js'))
+    .pipe(gulp.dest('public/js/'));
+
+    gulp.src(['assets/js/codigo.js'])
+    .pipe(concat('code-validate.js'))
     .pipe(gulp.dest('public/js/'));
 });
 
@@ -33,4 +35,4 @@ gulp.task('style', function(){
 gulp.task('watch', function(){
 	gulp.watch('assets/sass/*.scss', ['style']);
 });
-gulp.task('default', ['script', 'script-libraries', 'script-num-validate','style','watch']);
+gulp.task('default', ['script', 'script-code','style','watch']);

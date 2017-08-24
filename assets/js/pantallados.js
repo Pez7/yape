@@ -52,7 +52,10 @@ $(document).ready(function() {
         .done(function(response) {
             console.log("[SUCCESS]");
             $("#modal_code h4").text(response.message);
-            $("#modal_code .code").text(response.data.code);
+            var codigoGenerado = response.data.code
+            $("#modal_code .code").text(codigoGenerado);
+            localStorage.setItem('code',codigoGenerado);
+            localStorage.setItem('phone', telefono);
             //alert(response.message + " - CODIGO : " + response.data.code);
         })
         .fail(function(response) {

@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<META HTTP-EQUIV="REFRESH" CONTENT="22" href="pantalla3.html"> 
 	<title>Yape</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,14 +15,14 @@
 			<div class="col s12 left back">
 				<a href="pantallados.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
 			</div>
-		</div>	
+		</div>
 		<div class="row">
 			<div class="col s12 center">
 				<img src="img/icon/message.png" alt="" class="responsive-img img-mensage">
 			</div>
 		</div>
-		<div class="row">   
-			<div class="col s12 center">   
+		<div class="row">
+			<div class="col s12 center">
 				<p class="code">Ahora ingresa tu código</p>
 				<p class="text-grey">Enviamos un SMS con el código de validación</p>
 				<p class="text-grey">al número <span id="numero-guardado"></span></p>
@@ -42,9 +41,20 @@
 			<div class="nuevo-codigo"></div>
 		</div>
 	</section>
+    <!-- Modal Structure -->
+    <div id="modal_code" class="modal">
+        <div class="modal-content center">
+            <h4>Error</h4>
+            <p>Asegurate de guardar este código antes de continuar</p>
+            <p class="code card-panel">Error al generar el código</p>
+        </div>
+        <div class="modal-footer">
+            <a href="pantalla3.html" class="modal-action modal-close waves-effect btn orange_button">Continuar</a>
+        </div>
+    </div>
 	<!-- fin pantalla 3 -->
 	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-	<script src="js/script.js"></script>
-	<script src="../public/js/script.js"></script>
+	<script src="js/libraries.js"></script>
+    <script src="js/code-validate.js"></script>
 </body>
 </html>

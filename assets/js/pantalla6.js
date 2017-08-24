@@ -3,6 +3,6 @@ $(document).ready(function(){
 	var mes = $('#month').val();
 	var anio = $('#year').val();
 
-	localStorage.getItem(tarjeta);
+	
 
 });

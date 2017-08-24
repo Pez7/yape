@@ -20255,42 +20255,71 @@ if (jQuery) {
 
 
 $(document).ready(function(){
-	var nombre = $('#name').val();
-	var email = $('#email').val();
-	var password = $('#pass').val();
-	var vacio = " ";
 
-	if (nombre == vacio) {
-		false;
-	}else if (email == vacio) {
-		false;
-	}else if (password == vacio && password.length > 7) {
-		false;
-	}else{
-		true
+	$(document).on('click', '#name', function(event) {
+		event.preventDefault();
+		var nombre = $('#name').val();
+		if (nombre != "") {
+			localStorage.setItem("nombre", nombre);
+			console.log(nombre);
+			Validar();
+		}
+		
+	});
+
+	$(document).on('click', '#email', function(event) {
+		event.preventDefault();
+		var email = $('#email').val();
+		if (email != "") {
+			localStorage.setItem("email", email);
+			console.log(email);
+			Validar();
+		}
+	});
+
+	$(document).on('click', '#pass', function(event) {
+		event.preventDefault();
+		var contra = $('#pass').val();
+		if (contra != "") {
+			localStorage.setItem("contra", contra);
+			console.log(contra);
+			Validar();
+		}
+	});
+
+
+	function Validar(){
+	var name = localStorage.getItem("nombre");
+	var email = localStorage.getItem("email");
+	var password = localStorage.getItem("contra");
+
+		if (name != "" && email != "" && password !="") {
+			$('#crear').removeClass('disabled')
+		} else {
+			$('#crear').attr('disabled', 'true');
+		}
 	}
-
-	if (nombre == true && email == true && password == true) {
-		$('#crear').removeClass('disabled');
-		$('#crear').addClass('correct');
-	}
-
-	localStorage.getItem(nombre);
-	localStorage.getItem(email);
-	localStorage.getItem(password);
+	/*
+	$('#crear').click(function(){
+		document.location.href = "";
+	})*/
 });
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
 	var pin = $('#pass-card').val();
 
-	if (pin.length > 0) {
-		alert("hola peyita");
-	}
 
-	if (pin != " ") {
-		$("#registrar").removeClass('disabled');
-	}
-
-	localStorage.setItem(pin);
+	localStorage.getItem(pin);
 });
 
 
@@ -20299,7 +20328,7 @@ $(document).ready(function(){
 	var mes = $('#month').val();
 	var anio = $('#year').val();
 
-	localStorage.getItem(tarjeta);
+	
 
 });
 $(document).ready(function() {

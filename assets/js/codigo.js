@@ -47,7 +47,7 @@ $(document).ready(function() {
 		console.log("[VALIDATE]");
 		if(codigoIngresado == codigoGuardado){
 			console.log("[REDIRECT]");
-			window.location.href = "pantalla4y6.html";
+			window.location.href = "pantalla4.html";
 		}
 	}
 

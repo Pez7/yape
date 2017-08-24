@@ -43,10 +43,10 @@ $(document).ready(function(){
 			$('#crear').attr('disabled', 'true');
 		}
 	}
-	/*
+	
 	$('#crear').click(function(){
-		document.location.href = "";
-	})*/
+		document.location.href = "pantalla5.html";
+	})
 });
 
 

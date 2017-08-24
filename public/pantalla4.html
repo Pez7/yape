@@ -6,37 +6,37 @@
 	<title>Yape</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="../public/css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <!--inicio pantalla 4 -->
 <section id="screen-4" class="container">
 	<div class="row">
-		<div class="col s12 center">
-			<img src="../public/img/icon/lockone.png" alt="lock">
-			<h4>Crea tu usuario de Yape</h4>
-			<p>Ingres tu nombre, mail y clave de usuario</p>
+		<div id="first-box" class="col s12 center">
+			<img class="img-centro" src="img/icon/lockone.png" alt="lock">
+			<h5 id="ci nco">Crea tu usuario de Yape</h5>
+			<p>Ingresa un nombre, email y clave de usuario.</p>
 		</div>
 		<div class="row">
 			<div class="col s12">
 				<div class="input-field col s12">
-					<img src="../public/img/icon/user.png" class="prefix" alt="">
-					<input id="icon_prefix-1" type="text" class="validate center" placeholder="Nombre">
+					<img src="img/icon/user.png" class="prefix" alt="">
+					<input id="name" type="text" class="validate center" placeholder="Nombre">
 				</div>
 				<div class="input-field col s12">
-					<img src="../public/img/icon/message-gray.png" class="prefix" alt="">
-					<input id="icon_prefix-2" type="email" class="validate center" placeholder="correo@ejemplo.com">
+					<img src="img/icon/message-gray.png" class="prefix" alt="">
+					<input id="email" type="email" class="validate center" placeholder="correo@ejemplo.com">
 				</div>
 				<div class="input-field col s12">
-					<img src="../public/img/icon/lock.png" class="prefix" alt="">
-					<input id="icon_prefix-3" type="password" class="validate center" placeholder="Ingresa clave de 6 dígitos">
+					<img src="img/icon/lock.png" class="prefix" alt="">
+					<input id="pass" maxlength="6" type="password" class="validate center" placeholder="Ingresa clave de 6 dígitos">
 				</div>
 				<p id="care" class="center">Cuida esta clave como oro, es tu acceso a Yape.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col s12 center">
-				<a class="btn disabled">crear cuenta</a>
+				<a id="crear" class="btn-large disabled correct">crear cuenta</a>
 			</div>
 		</div>
 	</div>
@@ -44,6 +44,6 @@
 <!-- fin pantalla 4 -->
 
 	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-	<script src="../public/js/script.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

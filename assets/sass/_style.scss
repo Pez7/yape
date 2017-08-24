@@ -68,14 +68,19 @@ body{
 
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
+	.carousel{
+		width: 90%;
+		margin: 0 auto;
+	}
 	padding: 30px 0px 20px 0px;
 	width: 100%;
 	.parrafo{
 		background-color:transparent;
 		width: 100%;
 		position: absolute;
-		top: 221px;
+		top: 195px;
 		color: black;
+
 	}
 	.titulo-index{
 		font-size: 15px;
@@ -85,6 +90,24 @@ body{
 		font-size: 10px;
 	}
 }
+
+		}
+		.titulo-index{
+			font-size: 15px;
+			font-weight: bolder;
+		}
+		.parrafo-index{
+			font-size: 10px;
+		}
+		#btn-yellow{
+			background-color: $amarillo-botones;
+			color: white;
+			width: 80%;
+		}
+	
+	}
+
+
 
 /*fin de estilos de la pantalla-1 */
 
@@ -117,12 +140,16 @@ body{
 		font-size: 14px;
 		color: $gris-soft;
 	}
+	#numero-guardado{
+		color: $negro;
+	}
 }
 /*fin pantalla 3*/
 
 /*aqui crea los estilos*/
 /*estilos pantalla 4*/
 #screen-4{
+
 	div .row{
 		div{
 			img{
@@ -149,9 +176,115 @@ body{
 			}
 		}
 	}
+
+	div.row{
+		div .col{
+			div.input-field{
+				img{
+					width: 27px;
+					margin-top: 10px;
+				}
+			}
+			p{
+				font-weight:400;
+				font-size:18px;
+				color:$gris-soft;
+			}
+		}
+	}
+}
+#first-box{
+	.img-centro{
+		width: 125px;
+		margin-top: 27px;
+	}
+	#cinco{
+		font-weight:500;
+	}
+	p{
+		font-size: 17px;
+		color:$gris-soft;
+	}
+}
+#crear{
+	text-transform:uppercase;
+	border-radius: 5%;
+}
+.correct{
+	background-color:$amarillo-botones;
+
 }
 /*fin estilos pantalla 4*/
 
+/*Inicio estilos pantalla 6*/
+#box{
+	img{
+		width: 125px;
+		margin-top: 27px;
+	}
+	h5 #head{
+		font-weight:500;
+	}
+	p{
+		font-size: 17px;
+		color:$gris-soft;
+	}
+}
+#card-img{
+	img{
+		width: 27px;
+		margin-top: 10px;
+	}
+}
+#scan{
+	p{
+		color:$turquesa;
+		margin-top:-30px;
+		img{
+			width:27px;
+		}
+	}
+}
+#back{
+	color:$negro;
+	font-size:17px;
+	i{
+		font-weight:300;
+		font-size: 21px;
+	}
+}
+#box-card{
+	img{
+		width: 125px;
+		margin-top: 27px;
+	}
+	h5{
+		font-weight:500;
+	}
+	p{
+		span{
+			color:$gris-soft;
+		}
+	}
+}
+#card-two{
+	img{
+		width: 27px;
+		margin-top: 10px;
+	}
+}
+#input-card{
+	.s3{
+		i{
+			margin-top:28px;
+		}
+	}
+}
+/*Fin estilos pantalla 6*/
+
+
+
+/*INICIO DE ESTILOS DE PANTALLA DOS*/
 
 #phone {
 	background: url('../img/icon/teelefono.png');
@@ -183,9 +316,21 @@ body{
 	margin-top: 10%;
 }
 
+.orange_button {
+  background: #FBD43B;
+}
+
 .input-field.col label {
+
 	width: 100%;
 	top: -1.2em;
 	left: initial;
 }
+
+
+    width: 100%;
+    top: -1.2em;
+    left: initial;
+  }
+/*FIN DE ESTILOS DE PANTALLA DOS*/
 

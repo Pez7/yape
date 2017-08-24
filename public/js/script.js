@@ -20302,11 +20302,11 @@ $(document).ready(function() {
 		console.log("[VALIDATE]");
 		if(codigoIngresado == codigoGuardado){
 			console.log("[REDIRECT]");
-<<<<<<< HEAD
+
 			window.location.href = "pantalla4y6.html";
-=======
+
 			window.location.href = "pantalla4.html";
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 		}
 	}
 
@@ -20317,8 +20317,6 @@ $(document).ready(function() {
 
 
 
-<<<<<<< HEAD
-=======
 $.ajax({
 	url: '/api/registerNumber',
 	type: 'POST',
@@ -20338,7 +20336,7 @@ $.ajax({
 
 
 
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 
  $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({fullWidth: true});
@@ -20346,11 +20344,11 @@ $.ajax({
         
 $(document).ready(function(){
 
-<<<<<<< HEAD
+
 	$(document).on('click', '#name', function(event) {
-=======
+
 	$(document).on('keyup', '#name', function(event) {
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 		event.preventDefault();
 		var nombre = $('#name').val();
 		if (nombre != "") {
@@ -20361,11 +20359,11 @@ $(document).ready(function(){
 		
 	});
 
-<<<<<<< HEAD
+
 	$(document).on('click', '#email', function(event) {
-=======
+
 	$(document).on('change', '#email', function(event) {
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 		event.preventDefault();
 		var email = $('#email').val();
 		if (email != "") {
@@ -20375,11 +20373,11 @@ $(document).ready(function(){
 		}
 	});
 
-<<<<<<< HEAD
+
 	$(document).on('click', '#pass', function(event) {
-=======
+
 	$(document).on('keyup', '#pass', function(event) {
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 		event.preventDefault();
 		var contra = $('#pass').val();
 		if (contra != "") {
@@ -20393,10 +20391,9 @@ $(document).ready(function(){
 	function Validar(){
 	var name = localStorage.getItem("nombre");
 	var email = localStorage.getItem("email");
-<<<<<<< HEAD
-=======
+
 	console.log(email);
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 	var password = localStorage.getItem("contra");
 
 		if (name != "" && email != "" && password !="") {
@@ -20405,17 +20402,16 @@ $(document).ready(function(){
 			$('#crear').attr('disabled', 'true');
 		}
 	}
-<<<<<<< HEAD
 	/*
 	$('#crear').click(function(){
 		document.location.href = "";
 	})*/
-=======
+
 	
 	$('#crear').click(function(){
 		document.location.href = "pantalla5.html";
 	})
->>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
+
 });
 
 

@@ -20302,7 +20302,11 @@ $(document).ready(function() {
 		console.log("[VALIDATE]");
 		if(codigoIngresado == codigoGuardado){
 			console.log("[REDIRECT]");
+<<<<<<< HEAD
 			window.location.href = "pantalla4y6.html";
+=======
+			window.location.href = "pantalla4.html";
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 		}
 	}
 
@@ -20313,6 +20317,28 @@ $(document).ready(function() {
 
 
 
+<<<<<<< HEAD
+=======
+$.ajax({
+	url: '/api/registerNumber',
+	type: 'POST',
+	dataType: 'data',
+	data: {'terms': 'true', 'phone': '978005241'},
+})
+.done(function(res) {
+	console.log("success");
+	console.log(res.data);
+})
+.fail(function(res) {
+	console.log("error");
+	console.log(res.data);
+})
+
+
+
+
+
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 
  $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({fullWidth: true});
@@ -20320,7 +20346,11 @@ $(document).ready(function() {
         
 $(document).ready(function(){
 
+<<<<<<< HEAD
 	$(document).on('click', '#name', function(event) {
+=======
+	$(document).on('keyup', '#name', function(event) {
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 		event.preventDefault();
 		var nombre = $('#name').val();
 		if (nombre != "") {
@@ -20331,7 +20361,11 @@ $(document).ready(function(){
 		
 	});
 
+<<<<<<< HEAD
 	$(document).on('click', '#email', function(event) {
+=======
+	$(document).on('change', '#email', function(event) {
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 		event.preventDefault();
 		var email = $('#email').val();
 		if (email != "") {
@@ -20341,7 +20375,11 @@ $(document).ready(function(){
 		}
 	});
 
+<<<<<<< HEAD
 	$(document).on('click', '#pass', function(event) {
+=======
+	$(document).on('keyup', '#pass', function(event) {
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 		event.preventDefault();
 		var contra = $('#pass').val();
 		if (contra != "") {
@@ -20355,6 +20393,10 @@ $(document).ready(function(){
 	function Validar(){
 	var name = localStorage.getItem("nombre");
 	var email = localStorage.getItem("email");
+<<<<<<< HEAD
+=======
+	console.log(email);
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 	var password = localStorage.getItem("contra");
 
 		if (name != "" && email != "" && password !="") {
@@ -20363,10 +20405,17 @@ $(document).ready(function(){
 			$('#crear').attr('disabled', 'true');
 		}
 	}
+<<<<<<< HEAD
 	/*
 	$('#crear').click(function(){
 		document.location.href = "";
 	})*/
+=======
+	
+	$('#crear').click(function(){
+		document.location.href = "pantalla5.html";
+	})
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 });
 
 
@@ -20392,8 +20441,62 @@ $(document).ready(function(){
 	var mes = $('#month').val();
 	var anio = $('#year').val();
 
+<<<<<<< HEAD
 
 });
+=======
+	console.log(tarjeta);
+
+	$(tarjeta).change(function(){
+		validarTarjeta();
+	});
+	$(mes).change(function() {
+		validarMes();
+	});
+	$(anio).change(function() {
+		validarAnio();
+	});
+	
+	function validarTarjeta(){
+		if (tarjeta.length != 16 || isNaN(tarjeta) ){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	function validarMes(){
+		if(mes.length != 2 || isNaN(mes)){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	function validarAnio(){
+		if(anio.length != 4 || isNaN(anio)){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	
+	if(validarTarjeta && validarMes && validarAnio){
+		return true;
+		$('#continuar').removeClass('disabled');
+	}else{
+		return false;
+		$('#continuar').addClass('disabled');
+	}
+	$('#continuar').click(function() {
+		window.location.href = "pantalla6-2.html";
+	});
+	
+
+});
+
+
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7
 $(document).ready(function() {
     var telefono = "";
 
@@ -20463,3 +20566,12 @@ $(document).ready(function() {
     // MODAL
     $('.modal').modal();
 });
+<<<<<<< HEAD
+=======
+
+$(document).ready(function() {
+	var nom = localStorage.getItem('nombre');
+
+	$('#nombre-guardado').text(nom);
+});
+>>>>>>> 2b1d3663789ea13d5c63ada91dbfba611279ddd7

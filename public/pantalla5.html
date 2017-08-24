@@ -5,24 +5,33 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Yape</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="../public/css/style.min.css">
+
+	<link rel="stylesheet" href="css/style.min.css">
 	<!-- LOGO -->
-	<link rel="shortcut icon" href="assets/img/icon/yape.png">
+	<link rel="shortcut icon" href="img/icon/yape.png">
 </head>
-<body>
-<div id="pantalla5" class="container">
+<body id="body-pantalla5">
+	<div id="pantalla5" class="container">
 		<div class="row">
 			<div class="col s12">
-				<img src="../public/img/icon/check.png">
+				<img src="img/icon/check.png">
 				<p>¡Bien!</p>
 				<p>Ahora puedes usar Yape</p>
 			</div>	
 		</div>
 	</div>
-
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	<script src="https://use.fontawesome.com/1625bb79ec.js"></script>
-	<script src="../public/js/script.js"></script>
+	<script src="js/script.js"></script>
+
+	<!--recarga de pantalla 5 a pantalla 6-->
+	<script>setTimeout(function(){window.location.href='pantalla6-1.html'},3000);</script>
+
 </body>
 </html>
 

@@ -3,34 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Yapet</title>
+	<title>Yape</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-	<link rel="stylesheet" href="public/css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<!-- LOGO -->
-	<link rel="shortcut icon" href="assets/img/icon/yape.png">
+	<link rel="shortcut icon" href="img/icon/yape.png">
 </head>
 <body id="body-pantalla7">
 	<div class="container-fluid">
 		<div class="row" id="a-pantalla7">
-			<div class="col s12 right-align"><img src="assets/img/icon/engine.png"></div>
+			<div class="col s12 right-align"><img class="icon" src="img/icon/engine.png"></div>
 			<div class=" center-align col s12">
-				<img src="assets/img/icon/happy-face.png">
-				<h4>Hola</h4>
-				<span><img src="assets/img/icon/eye.png"></img>Mostrar Saldo</span>
+				<img src="img/icon/happy-face.png">
+				<h4>Hola<span id="nombre-guardado"></span></h4>
+				<span><img class="icon" src="img/icon/eye.png"></img> Mostrar Saldo</span>
 			</div>	
 		</div>
-		<div id="mov" class="b-pantalla7 row">
+		<div id="mov" class="row">
 		<div class="col s6"><p class="left-align">ÚLTIMOS MOVIMIENTOS</p></div>
 			<div class="col s6 right-align"><i class="small material-icons">chevron_right</i></div>	
 		</div>
-		<div class="b-pantalla7 row">
-		<div class="col s6"><img src="assets/img/icon/icon.png"></div>
+		<div id="pago" class="row">
+		<div class="col s6"><img class="imag" src="img/icon/icon.png"></div>
 			<div class="col s6"><p>¿Aún no realizas tu primer pago?</p><p>Es rápido y sencillo</p></div>	
 		</div>
-		<div class="b-pantalla7 row">
-		<div class="col s6"><img src="assets/img/icon/send.png"><p>ENVIAR PAGO</p></div>
-			<div class="col s6"><img src="assets/img/icon/code-qr.png"><p>RECIBIR PAGO</p></div>	
+		<div id="price" class="row">
+		<div class="col s6"><img class="imag" src="img/icon/send.png"><p>ENVIAR PAGO</p></div>
+			<div class="col s6"><img class="imag" src="img/icon/code-qr.png"><p>RECIBIR PAGO</p></div>	
 		</div>
 	</div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>

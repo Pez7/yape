@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(document).on('click', '#name', function(event) {
+	$(document).on('keyup', '#name', function(event) {
 		event.preventDefault();
 		var nombre = $('#name').val();
 		if (nombre != "") {
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		
 	});
 
-	$(document).on('click', '#email', function(event) {
+	$(document).on('change', '#email', function(event) {
 		event.preventDefault();
 		var email = $('#email').val();
 		if (email != "") {
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).on('click', '#pass', function(event) {
+	$(document).on('keyup', '#pass', function(event) {
 		event.preventDefault();
 		var contra = $('#pass').val();
 		if (contra != "") {
@@ -35,6 +35,7 @@ $(document).ready(function(){
 	function Validar(){
 	var name = localStorage.getItem("nombre");
 	var email = localStorage.getItem("email");
+	console.log(email);
 	var password = localStorage.getItem("contra");
 
 		if (name != "" && email != "" && password !="") {
@@ -43,10 +44,10 @@ $(document).ready(function(){
 			$('#crear').attr('disabled', 'true');
 		}
 	}
-	/*
+	
 	$('#crear').click(function(){
-		document.location.href = "";
-	})*/
+		document.location.href = "pantalla5.html";
+	})
 });
 
 

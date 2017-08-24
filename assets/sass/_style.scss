@@ -1,6 +1,6 @@
 body{
-    margin:0;
-    padding:0;
+	margin:0;
+	padding:0;
 }
 /*aqui crea los estilos*/
 
@@ -21,30 +21,51 @@ body{
 /*fin pantalla 5*/
 
 /*inicio pantalla 7*/
+#body-pantalla7{
+	background-color: #38052a;
+	h4{
+		color: whitesmoke;
+	}
+	p{
+		color: whitesmoke;
+		font-weight: bold; 
+		text-align: center;
+		position: relative;
+		font-size: 10px;
+	}
+
+	.imag{
+		width: 50%;
+		margin-left: 40px;
+	}
+}
+
 #a-pantalla7{
 	background-color: #451e36;
-}
-
-#body-pantalla7{
-background-color: #38052a;
-}
-
-.b-pantalla7{
-	color: whitesmoke;
-	font-weight: bold;
-#mov{
-font-size: 20px;
-margin-top: -80px;
-height: 100%;
-}
-	text-align: center;
-	position: relative;
-	margin-top: 50%;
+	span{
+		color: $turquesa;
+	}
 	img{
 		width: 30%;
 	}
+	.icon{
+		width:5%;
+	}
 }
+
+#mov{
+	height: 100%;
+	i{
+		color: whitesmoke;
+	}
+}
+
+#pago{
+	height: 150px;
+}
+
 /*fin pantalla 7*/
+
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
 	.carousel{
@@ -59,7 +80,17 @@ height: 100%;
 		position: absolute;
 		top: 195px;
 		color: black;
-		}
+
+	}
+	.titulo-index{
+		font-size: 15px;
+		font-weight: bolder;
+	}
+	.parrafo-index{
+		font-size: 10px;
+	}
+}
+
 		.titulo-index{
 			font-size: 15px;
 			font-weight: bolder;
@@ -72,8 +103,7 @@ height: 100%;
 			color: white;
 			width: 80%;
 		}
-	
-	}
+
 
 
 /*fin de estilos de la pantalla-1 */
@@ -116,6 +146,34 @@ height: 100%;
 /*aqui crea los estilos*/
 /*estilos pantalla 4*/
 #screen-4{
+
+	div .row{
+		div{
+			img{
+				margin-top: 40px;
+				width: 195px;
+			}
+			h4{
+				font-weight:700;
+			}
+		}
+	}
+	div.row{
+		div .input-field{
+			img{
+				width: 31px;
+				margin-top: 10px;
+			}
+		}
+	}
+	div.row{
+		div{
+			a{
+				text-transform:uppercase;
+			}
+		}
+	}
+
 	div.row{
 		div .col{
 			div.input-field{
@@ -151,10 +209,12 @@ height: 100%;
 }
 .correct{
 	background-color:$amarillo-botones;
+
 }
 /*fin estilos pantalla 4*/
 
 /*Inicio estilos pantalla 6*/
+
 #box{
 	img{
 		width: 125px;
@@ -225,27 +285,27 @@ height: 100%;
 /*INICIO DE ESTILOS DE PANTALLA DOS*/
 
 #phone {
-  background: url('../img/icon/teelefono.png');
-  background-repeat: no-repeat;
-  background-size: 70px 30px;
-  background-position: left;
-  text-align: center;
+	background: url('../img/icon/teelefono.png');
+	background-repeat: no-repeat;
+	background-size: 70px 30px;
+	background-position: left;
+	text-align: center;
 }
 
 .header_phone {
-  img {
-    width: 40%;
-    margin-top: 20%;
-  }
+	img {
+		width: 40%;
+		margin-top: 20%;
+	}
 
-  &__title {
-    font-weight: bold;
-    font-size: 1.7em;
-  }
+	&__title {
+		font-weight: bold;
+		font-size: 1.7em;
+	}
 
-  &__subtitle {
-    color: #DFDFDF;
-  }
+	&__subtitle {
+		color: #DFDFDF;
+	}
 
 }
 
@@ -264,3 +324,4 @@ height: 100%;
     left: initial;
   }
 /*FIN DE ESTILOS DE PANTALLA DOS*/
+

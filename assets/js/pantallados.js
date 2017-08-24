@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $(".numero").on("keyup", "input[name=phone]", function(event) {
         telefono = $("input[name=phone]").val();
+        localStorage.setItem('telefono', telefono);
 
         if(phoneIsValid()) {
             showPhoneOkMessage();
@@ -52,6 +53,7 @@ $(document).ready(function() {
         .done(function(response) {
             console.log("[SUCCESS]");
             $("#modal_code h4").text(response.message);
+
             var codigoGenerado = response.data.code
             $("#modal_code .code").text(codigoGenerado);
             localStorage.setItem('code',codigoGenerado);

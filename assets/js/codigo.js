@@ -1,27 +1,49 @@
 $(document).ready(function() {
-	contador();
-	datos();
+	var numeroGuardado = $('#numero-guardado').text(localStorage.getItem('telefono'));
+	var codigoGuardado = localStorage.getItem('code');
 
-	//var numeroGuardado = $('#numero-guardado').text(localStorage.getItem('datovane'));
-	if(datos()){
-		window.location.href = "pantalla4y6.html";
+	function contador (){
+		var n = 0; //inicializador
+		var l = document.getElementById("num"); //donde muestra el dato 
+		window.setInterval(function(){ 
+		  	l.innerHTML = n;
+		  	n++;
+
+		  	if(n==22){ //limite del número
+		  		n=0;
+		  		$.ajax({
+					url: '/api/resendCode',
+					type: 'POST',
+					data: {
+						'phone': numeroGuardado
+					},
+				})
+				.done(function(res) {
+					console.log("success");
+					console.log(res);
+					$('.nuevo-codigo').append('<p>'+ res.data.code +'</p>');
+				})
+				.fail(function() {
+					console.log("error");
+				})
+				.always(function() {
+					console.log("complete");
+				});
+		  	}
+		},1000);
 	}
+
+	function datos(){
+		var info = $('#info-ingresada').val();
+
+		info.change(function(){
+			if(info == codigoGuardado){
+				window.location.href = "pantalla4.html";
+			}
+		});
+	}
+
 });
 
-var contador = function(){
-	var n = 0; //inicializador
-	var l = document.getElementById("num"); //donde muestra el dato 
-	window.setInterval(function(){ 
-	  	l.innerHTML = n;
-	  	n++;
 
-	  	if(n==22){ //condición de veces que avence el número
-	  		n=0;
-	  	}
-	},1000);
-}
 
-var datos = function(){
-	var info = $('#info-ingresada').val();
-	
-}

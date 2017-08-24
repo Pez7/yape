@@ -1,20 +1,24 @@
 $(document).ready(function() {
+    var telefono = "";
+
+    $(".numero").on("keyup", "input[name=phone]", function(event) {
+        telefono = $("input[name=phone]").val();
+
+        if(phoneIsValid()) {
+            showPhoneOkMessage();
+        } else {
+            showPhoneErrorMessage();
+        }
+
+        allowContinue();
+    });
 
     $('#acepto').on('click', function() {
         allowContinue();
     });
 
-    $(".numero").on("keyup", "input[name=phone]", function(event) {
-        if(phoneIsValid()) {
-            showPhoneOkMessage();
-        } else  {
-            showPhoneErrorMessage();
-        }
-        allowContinue();
-    });
-
     function phoneIsValid() {
-        if ($("input[name=phone]").val().length != 9 || isNaN($("input[name=phone]").val())) {
+        if (telefono.length != 9 || isNaN(telefono)) {
             return false;
         } else {
             return true;
@@ -29,8 +33,6 @@ $(document).ready(function() {
     function showPhoneOkMessage() {
         $("input[name=phone]").css('border-color','#0aa827');
         $("input[name=phone]").removeClass('invalid').addClass('valid');
-        //guardamos el numero de telefono a localStorage
-        localStorage.setItem('phone',$("input[name=phone]").val());
     }
 
     function allowContinue() {
@@ -40,4 +42,28 @@ $(document).ready(function() {
             $("#phone_button").addClass('disabled');
         }
     }
+
+    $('#phone_button').on('click', function() {
+        $.ajax({
+        url: '/api/registerNumber',
+        type: 'POST',
+        data: {'terms': true, 'phone': telefono},
+        })
+        .done(function(response) {
+            var codigoGenerado = response.data.code;
+
+            console.log("[SUCCESS]");
+            $("#modal_code h4").text(response.message);
+            $("#modal_code .code").text(codigoGenerado);
+            localStorage.setItem('code', codigoGenerado);
+            localStorage.setItem('phone', telefono);
+            //alert(response.message + " - CODIGO : " + response.data.code);
+        })
+        .fail(function(response) {
+            console.log("[ERROR]");
+        })
+    });
+
+    // MODAL
+    $('.modal').modal();
 });

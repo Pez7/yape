@@ -4,6 +4,47 @@ body{
 }
 /*aqui crea los estilos*/
 
+/*inicio pantalla 5*/
+#body-pantalla5{
+	background-color: $amarillo-botones;
+	#pantalla5{
+		color: $negro;
+		text-align: center;
+		font-weight: bold;
+		position: relative;
+		margin-top: 50%;
+		img{
+			width: 30%;
+		}
+	}
+}
+/*fin pantalla 5*/
+
+/*inicio pantalla 7*/
+#a-pantalla7{
+	background-color: #451e36;
+}
+
+#body-pantalla7{
+background-color: #38052a;
+}
+
+.b-pantalla7{
+	color: whitesmoke;
+	font-weight: bold;
+#mov{
+font-size: 20px;
+margin-top: -80px;
+height: 100%;
+}
+	text-align: center;
+	position: relative;
+	margin-top: 50%;
+	img{
+		width: 30%;
+	}
+}
+/*fin pantalla 7*/
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
 	.carousel{
@@ -66,6 +107,9 @@ body{
 		font-size: 14px;
 		color: $gris-soft;
 	}
+	#numero-guardado{
+		color: $negro;
+	}
 }
 /*fin pantalla 3*/
 
@@ -102,6 +146,7 @@ body{
 /*fin estilos pantalla 4*/
 
 
+/*INICIO DE ESTILOS DE PANTALLA DOS*/
 #phone {
   background: url('../img/icon/teelefono.png');
   background-repeat: no-repeat;
@@ -132,9 +177,13 @@ body{
   margin-top: 10%;
 }
 
+.orange_button {
+  background: #FBD43B;
+}
+
 .input-field.col label {
     width: 100%;
     top: -1.2em;
     left: initial;
   }
-
+/*FIN DE ESTILOS DE PANTALLA DOS*/

@@ -5,7 +5,10 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 
 gulp.task('script', function(){
-	gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/materialize-css/dist/js/materialize.js','assets/js/*.js'])
+	gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/materialize-css/dist/js/materialize.js',
+        'assets/js/pantalla-1.js',
+        'assets/js/pantalla4.js'
+    ])
 	.pipe(concat('script.js'))
 	.pipe(gulp.dest('public/js/'));
 });
@@ -29,6 +32,10 @@ gulp.task('script-code', function(){
 
     gulp.src(['assets/js/pantalla6-2.js'])
     .pipe(concat('card-pass-validate.js'))
+    .pipe(gulp.dest('public/js/'));
+
+    gulp.src(['assets/js/pantalla7.js'])
+    .pipe(concat('start.js'))
     .pipe(gulp.dest('public/js/'));
 });
 

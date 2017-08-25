@@ -3,6 +3,9 @@ $(document).ready(function(){
 		validarTodosLosCampos();
 	});
 	$('#continuar').click(function() {
+		var tarjeta = $('input:text[name=card]').val();
+		
+		localStorage.setItem('card', tarjeta);
 		window.location.href = "pantalla6-2.html";
 	});
 	

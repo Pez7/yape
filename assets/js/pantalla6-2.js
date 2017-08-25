@@ -1,7 +1,17 @@
 $(document).ready(function(){
-	var pin = $('#pass-card').val();
+	var tarjetaAlmacenada = localStorage.getItem('card');
 
+    tarjetaAlmacenada = tarjetaAlmacenada.substr(-4);
+    $("#numeroTarjeta").text(tarjetaAlmacenada);
 
-	localStorage.getItem(pin);
+    $("body").on("keyup", "input#pass-card", function(event) {
+        var passCard = $(this).val();
+
+        if(passCard.length == 4){
+            $('#registrar').removeClass('disabled');
+        } else {
+            $("#registrar").addClass('disabled');
+        }
+    });
 });
 

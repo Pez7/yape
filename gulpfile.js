@@ -26,6 +26,10 @@ gulp.task('script-code', function(){
     gulp.src(['assets/js/pantalla6.js'])
     .pipe(concat('card-validate.js'))
     .pipe(gulp.dest('public/js/'));
+
+    gulp.src(['assets/js/pantalla6-2.js'])
+    .pipe(concat('card-pass-validate.js'))
+    .pipe(gulp.dest('public/js/'));
 });
 
 gulp.task('style', function(){

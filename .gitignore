@@ -61,5 +61,5 @@ typings/
 api/users/*
 
 # Public folders gererated by gulp
-public/js/*
-public/css/*
+# public/js/*
+# public/css/*

@@ -1,9 +1,12 @@
 $(document).ready(function(){
-	var tarjeta = $('#card').val();
-	var mes = $('#month').val();
-	var anio = $('#year').val();
 
-	console.log(tarjeta);
+	$("#screen-6").change(function() {
+		var tarjeta = $('input:text[name=card]').val();
+		console.log(tarjeta);
+		var mes = $('input#month').val();
+		console.log(mes);
+		var anio = $('input#year').val();
+		console.log(anio);
 
 	$(tarjeta).change(function(){
 		validarTarjeta();
@@ -49,8 +52,7 @@ $(document).ready(function(){
 	$('#continuar').click(function() {
 		window.location.href = "pantalla6-2.html";
 	});
-	
-
+	});
 
 });
 

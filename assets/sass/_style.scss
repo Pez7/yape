@@ -68,19 +68,29 @@ body{
 
 /* inicio de los estilos de la pantalla-1 */ 
 .contenedor-index{
+	padding: 30px 0px 20px 0px;
+	width: 100%;
+
 	.carousel{
 		width: 90%;
 		margin: 0 auto;
+
+		.indicators .indicator-item.active {
+		    background-color: #F64552;
+		}
+
+		&.carousel-slider {
+			height: 59vh !important;
+		}
+
+		.carousel-item>img {
+			width: 60%;
+		}
 	}
-	padding: 30px 0px 20px 0px;
-	width: 100%;
 	.parrafo{
 		background-color:transparent;
 		width: 100%;
-		position: absolute;
-		top: 195px;
 		color: black;
-
 	}
 	.titulo-index{
 		font-size: 15px;
@@ -91,23 +101,20 @@ body{
 	}
 }
 
-		.titulo-index{
-			font-size: 15px;
-			font-weight: bolder;
-		}
-		.parrafo-index{
-			font-size: 10px;
-		}
-		#btn-yellow{
-			background-color: $amarillo-botones;
-			color: white;
-			width: 80%;
-		}
-
-
+.titulo-index{
+	font-size: 15px;
+	font-weight: bolder;
+}
+.parrafo-index{
+	font-size: 10px;
+}
+#btn-yellow{
+	background-color: $amarillo-botones;
+	color: white;
+	width: 80%;
+}
 
 /*fin de estilos de la pantalla-1 */
-
 
 /*pantalla 3*/
 #ingresar-codigo{
